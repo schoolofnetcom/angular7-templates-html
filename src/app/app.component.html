@@ -1,0 +1,58 @@
+<ng-container *ngTemplateOutlet="logo; context: objContext"></ng-container>
+<p>
+    <!--<ng-container *ngTemplateOutlet="flagLogo? logo: logoSmall; context: objContext"></ng-container>-->
+    <ng-container *ngTemplateOutlet="logo; context: objContext"></ng-container>
+</p>
+<!--<p>-->
+    <!--<ng-container [ngSwitch]="role">-->
+        <!--<ng-container *ngSwitchCase="'admin'">-->
+            <!--<ng-container *ngTemplateOutlet="headerAdmin"></ng-container>-->
+        <!--</ng-container>-->
+        <!--<ng-container *ngSwitchCase="'manager'">-->
+            <!--<ng-container *ngTemplateOutlet="headerManager"></ng-container>-->
+        <!--</ng-container>-->
+    <!--</ng-container>-->
+<!--</p>-->
+<employee-list></employee-list>
+<app-teste></app-teste>
+<app-test-ng-content>
+    <div>conteúdo</div>
+    <span modal>outro texto</span>
+    texto
+</app-test-ng-content>
+<ng-container *ngTemplateOutlet="logo"></ng-container>
+
+
+<ng-template #logo let-nome="name" let-variavel>
+    <img src="/assets/school-of-net-logo.png" alt="">
+    {{title}}
+    {{nome}}
+    {{variavel}}
+    <button (click)="mudarNome()">Alterar Nome</button>
+</ng-template>
+
+<ng-template #logoSmall let-nome1="name">
+    <img src="/assets/school-of-net-logo.png" alt="" width="30" height="30">
+    {{title}}
+    {{nome1}}
+</ng-template>
+
+<ng-template #headerAdmin>
+    <nav></nav>
+    <!--<componente-header-admin></componente-header-admin>-->
+</ng-template>
+
+<ng-template #headerManager>
+    <nav></nav>
+    <!--<componente-header-manager></componente-header-manager>-->
+</ng-template>
+
+<ng-template #header>
+
+</ng-template>
+<!--<app-test-ng-content>-->
+    <!--<component1></component1>-->
+    <!--<component2></component2>-->
+<!--</app-test-ng-content>-->
+
+<!-- table thead tr td tbody tr td tfoot tr td-->
